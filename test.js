@@ -1,7 +1,6 @@
 var google = require('googleapis');
 var OAuth2 = google.auth.OAuth2;
 var plus = google.plus('v1');
-var gmail = google.gmail('v1');
 
 var REDIRECT_URL = "";
 var CLIENT_ID = "471527063715-lds28h4b374tuhqp3b7vqjbhv01i7a1d.apps.googleusercontent.com";
@@ -18,10 +17,11 @@ plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, response) {
   console.log(response);
 });
 */
+var gmail = google.gmail({ version: 'v1', auth: oauth2Client });
 
-gmail.users.messages.list({ userId: 'me', includeSpamTrash:'no', labelIds:'', maxResults:2, pageToken:'', q:'', fields: 'all'}), function(err, response) {
-  	console.log(response);
-	console.log(err);
+gmail.users.messages.list({ userId: 'me', includeSpamTrash:'false', labelIds:'manintec', maxResults:2, pageToken:'', q:'', fields: 'all'}), function(err, response) {
+  	//console.log(response);
+	//console.log('ok');
 }
 
 
