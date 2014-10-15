@@ -3,8 +3,8 @@ var OAuth2 = google.auth.OAuth2;
 var plus = google.plus('v1');
 
 var REDIRECT_URL = "";
-var CLIENT_ID = "471527063715-lds28h4b374tuhqp3b7vqjbhv01i7a1d.apps.googleusercontent.com";
-var CLIENT_SECRET= "K9-SrnxoN0M2TR8CWY6gAEBj";
+var CLIENT_ID = "";
+var CLIENT_SECRET= "";
 var oauth2Client = new OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
 
